@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+  </meta>
+
+  <body>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+  <button v-on:click="Aumentar(valor)">+</button>
+  <br>
+  <h1>{{valor}}</h1>
+  <br>
+  <button v-on:click="Diminuir(valor)">-</button>
+</div>
+
+
+<script>
+  const { createApp, ref } = Vue
+
+  createApp({
+    data() {
+      return { valor: 1,
+               }
+    },
+    methods: 
+    {
+        Diminuir(valor)
+        {
+         return  this.valor = valor - 1  
+        },
+
+        Aumentar(valor)
+        {
+          return this.valor = valor + 1  
+        }
+    }
+ }).mount('#app');
+</script>
+
+  </body>
+</html>
